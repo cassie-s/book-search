@@ -16,7 +16,7 @@
 
 
   ## Installation
-  Clone repository from GitHub and install dependencies with `npm install`. To use the local version run `npm run develop`. Otherwise, use the deployed version: https://murmuring-cliffs-82000.herokuapp.com/
+  Clone repository from GitHub and install dependencies with `npm install`. To use the local version run `npm run develop`. Otherwise, use the deployed version: https://google-book-search95.herokuapp.com/
 
 
   ## Contributing
