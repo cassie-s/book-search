@@ -16,8 +16,9 @@ if (process.env.NODE_ENV !== "production") {
   loadErrorMessages();
 }
 
+// Use environment variable or fallback to '/graphql'
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: process.env.REACT_APP_GRAPHQL_URI || '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -30,7 +31,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-// establish apollo client
+// Establish Apollo Client
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
